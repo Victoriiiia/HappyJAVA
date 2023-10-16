@@ -1,3 +1,5 @@
+package Lesson1;
+
 public class Class {
     public static void main(String[] args) {
         // byte -128 till 127
