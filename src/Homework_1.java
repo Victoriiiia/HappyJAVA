@@ -7,7 +7,7 @@ public class Homework_1 {
         a=9;
         b=7;
         System.out.println(a);
-        System.out.println(b);
+        System.out.println(b );
 
     }
 }
