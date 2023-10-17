@@ -8,7 +8,7 @@ public class SplitMethod {
                 "In it, we just need to determine how many" +
                 " times the character 'a' occurs there." +
                 " And we can use the split method and the length method.";
-        String buk;
+        //String buk;
         System.out.println(st.length());
         String[] arrayOfWords = st.split("\\s");
         String word0 = arrayOfWords [0];
