@@ -8,9 +8,11 @@ public class SplitMethod {
                 "In it, we just need to determine how many" +
                 " times the character 'a' occurs there." +
                 " And we can use the split method and the length method.";
-        //String buk;
-        System.out.println(st.length());
         String[] arrayOfWords = st.split("\\s");
+        System.out.println(st.length());
+        String [] arrayOfString = st.split("a");
+        int size = arrayOfString.length;
+        System.out.println("Количество букв 'a' в строке " +size);
         String word0 = arrayOfWords [0];
         String word1 = arrayOfWords [1];
         String word2 = arrayOfWords [2];
@@ -73,14 +75,11 @@ public class SplitMethod {
         System.out.println(word28);
         System.out.println(word29);
         System.out.println(word30);
-        String containsString = "Completely random text in English. " +
-                "In it, we just need to determine how many" +
-                " times the character 'a' occurs there." +
-                " And we can use the split method and the length method.";
-        System.out.println("Количество слов" + " " + arrayOfWords.length);
-      //String[] arrayOfWords = st.split("a", buk.toLowerCase());
-        //String[] arrayOfWords = st.split("a", buk.toUpperCase());
-        //System.out.println(arrayOfWords);
-        //String buk = arrayOfWords['a'];
+        //String buuk;
+        //System.out.println("Количество слов" + " " + arrayOfWords.length);
+        //String buuk = st.split("a", String buuk = st.split("a", buuk.toLowerCase()));
+        //String[] arrayOfWord = st.split("a", Integer.parseInt(buuk.toUpperCase()));
+        //System.out.println(arrayOfWords[20]);
+        //System.out.println(String buuk = arrayOfWords['a']);
     }
 }
