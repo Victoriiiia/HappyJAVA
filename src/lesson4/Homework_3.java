@@ -68,8 +68,8 @@ public class Homework_3 {
 //Пользователь вводит с клавиатуры три целочисленных значения.
 // На экран выводится информация можно ли из этих сторон построить треугольник.
 // (необходимо вспомнить правило построения треугольника по трем сторонам).
-        Scanner triangle = new Scanner(System.in);
-        System.out.println("Получится ли построить треугольник? Введите три целых числа a b c ");
+        //Scanner triangle = new Scanner(System.in);
+        //System.out.println("Получится ли построить треугольник? Введите три целых числа a b c ");
         //int a; int b; int c;
         //boolean a = a<(b+c);
         //boolean b = b<(a+c);
