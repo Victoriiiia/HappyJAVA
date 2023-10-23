@@ -1,4 +1,4 @@
-package Lesson1;
+package lesson1;
 public class Task {
     public static void main(String[] args) {
         boolean a = (85/5 + (19-25%3))==(-3)*(-2+14/(-2))&&(2%7-1)*3<=2;

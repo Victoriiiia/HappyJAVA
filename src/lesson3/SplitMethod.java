@@ -1,6 +1,4 @@
-package Lesson3;
-
-import java.util.Locale;
+package lesson3;
 
 public class SplitMethod {
     public static void main(String[] args) {
