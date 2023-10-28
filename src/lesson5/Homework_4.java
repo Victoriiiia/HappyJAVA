@@ -1,105 +1,132 @@
 package lesson5;
 
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 //Циклы и массивы.
-//Задание
-//1)
-//Написать программу, которая будет считывать введенные пользователем
-//слова с клавиатуры слова, и склеивать их в одно предложение до тех пор,
-//пока пользователь не введет с клавитуры слово STOP. Все слова введенные
-//до этого должны отобразится в консоли одним предложением.
-
 public class Homework_4 {
     public static void main(String[] args) {
         Scanner x = new Scanner(System.in);
         System.out.println("Введите слово:");
         String text = x.next();
-        String result="";
+        String result = "";
         while (!text.equals("STOP")) {
-            result = result + x.nextLine();
-            System.out.println("Введите слово:");
-            text = result + x.next();
-
+            result = result + text;
+            System.out.println("Введите слово");
+            text = x.next();
         }
-        System.out.println(text);
+        System.out.println(result);
         System.out.println("=============================");
-
-//2)
-//Написать программу в которой пользователь вводит с клавиатуры число,
-//а программа определяет, является она полиндромом или нет.
-// И выводит данную информацию на экран.
-
-  //  Scanner chislo = new Scanner(System.in);
-   // System.out.println("Введите число:");
-     //   int a = chislo.nextInt();
-
-
-//3 Написать проограмму, условно для склада приема металла.
-// Представим, что склад может хранить определенный вес металла.
-// Пользователь вводит с клавиатуры вес, который может хранится на складе.
-// Дальше пользователь вводит с клавиатуры вес, который условно собирается сдать
-// на склад пользователь. Программа должна после каждой сдачи металла показывать
-// сколько веса еще может принять склад. Если пользователь хочет сдать металла больше
-// чем осталось места на складе, то программа не дает ему это сделать и уведомляет
-// пользователя, о невозможности данной операции. Если пользователь сдает металл весом
-// меньше чем 5, программа тоже предупреждает о невозможности приемки такого малого
-// веса. Программа завершается, когда место на складе закончилось.
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Максимальная вместимость склада 20 тонн металла!");
-        int tonn = 0;
-        while (tonn <= 20) {
-            if (tonn == 20) {
-                continue;
-            }
-            System.out.println("Сколько тонн металла хотите сдать?");
-            int tempCount = scanner.nextInt();
-            if (tonn + tempCount > 20) {
-                System.out.println("Недостаточно места на складе.");
-                continue;
-            }
-            tonn = tonn + tempCount;
-            System.out.println("Выгрузка возможна ещё " + (20 - tonn));
+    }
+public static void main(String[] args) {
+        Scanner chislo = new Scanner(System.in);
+        System.out.println("Введите число:");
+        String value = chislo.nextLine();
+        String num2="";
+        for (int i=value.length()-1;i>=0;i--){
+            num2=value.charAt(i);}
+        if (num2.equals(value)) {
+            System.out.println("Число полиндом");
+        } else {
+            System.out.println("Число не полиндром");
         }
-        System.out.println("Склад полон");
-        System.out.println("=============================");
-
-
-
-//4) Первый будет состоять из следующих имен: “Петя”, “Маша”, “Алёна”,
-// “Федя”, “Саша”, “Антон”, “Глеб”. Второй будет содержать следующие значения
-// типа int: 10, 12, 14, 16, 18, 20. Третий будет содержать следующие значения:
-// “школу”, “магазин”, “церковь”, “тренажерный зал”, “кино”, “поликлинику”.
-// Пользователь вводит три числа с клавиатуры, которые будут соответствовать
-// индексам каждого из элементов массивов. Пример1. после ввода 3,2,1:
-// На экране должно вывестись следующее сообщение: “Федя будет идти в магазин в 14:00”
-// Пример2. после ввода 1,2,3: На экране должно вывестись следующее сообщение:
-// “Маша будет идти в тренажерный зал в 14:00”
-
-
 
 }
+public static void main(String[] args) {
 
-
-
-
-
-
-
-
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Максимальная вместимость склада 20 тонн металла!");
+    int tonn = 0;
+    while (tonn <= 20) {
+        if (tonn == 20) {
+            break;
+        }
+        System.out.println("Сколько тонн металла хотите сдать?");
+        int tempCount = scanner.nextInt();
+        if (tonn + tempCount > 20) {
+            System.out.println("Недостаточно места на складе.");
+            continue;
+        }
+        tonn = tonn + tempCount;
+        System.out.println("Выгрузка возможна ещё " + (20 - tonn));
+    }
+    System.out.println("Склад полон");
+    System.out.println("=============================");
+}
+public static void main(String[] args) {
+    String[] names = {"Петя", "Маша", "Алёна", "Федя", "Саша", "Антон", "Глеб"};
+    int[] time = {10, 12, 14, 16, 18, 20};
+    String[] place = {"школу", "магазин", "церковь", "тренажерный зал", "кино", "поликлинику"};
+    String res = "%1$s будет идти в %2$s в %3$d";
+    int=first;
+    Scanner sca = new Scanner(System.in);
+    System.out.println("Insert number от 0 до 6");
+    do {
+        System.out.println("Insert number");
+        int x = sca.nextInt();
+        first = x;
+    } while (first < 0 || first > names.length - 1);
+    System.out.println(names[first]);
+    int=second;
+    do {
+        System.out.println("Insert number");
+        int x = sca.nextInt();
+        second = x;
+    } while (second < 0 || second > time.length - 1);
+    int=third;
+    do {
+        System.out.println("Insert number");
+        int x = sca.nextInt();
+        third = x;
+    } while (third < 0 || third > place.length - 1);
+    System.out.printf(res, names[first], place[third], time[second]);
 }
 
+    public static void main(String[] args) {
+        Random randomTen = new Random();
+        int[] newRandom = new int[10];
+        for (int i = 0; i < newRandom.length; i++) {
+            newRandom[i] = randomTen.nextInt(100);
+        }
+        System.out.println(Arrays.toString(newRandom));
+        Scanner sca = new Scanner(System.in);
+        System.out.println("Insert number:");
+        int number = sca.nextInt();
+        boolean foundNum  = false;
+        for (int i = 0; i < newRandom.length; i++) {
+            if (newRandom[i] == number) {
+                foundNum = true;
+                break;
+            }
+        }
+        if (foundNum){
+            System.out.println("Это число есть"+ number);
+        }else {
+            System.out.println("Этого числа нет"+ number);
+        }
+        System.out.println("============================");
+    }
+    public static void main(String[] args) {
+        Random random45 = new Random();
+        int[] arrays = new int[45];
+        for (int i = 0; i < arrays.length; i++) {
+            arrays[i] = (int) ((Math.random() * 100) - 50);
+        }
+        System.out.println(Arrays.toString(arrays));
 
-
-
-
-
-//5)
-//Есть одномерный массив из 10 элементов, заполнен- ный случайными числами.
-// Пользователь вводит с клавиатуры число. Программа показывает есть ли
-// такое число в созданном до этого массиве.
-
-//6)
-//Заполнить массив на 45 элементов случайными числами от -50 до +50.
-// Найти минимальный элемент и вывести его на консоль. Найти максимальный
-// элемент и вывести его на консоль.
-
+        int min = arrays[0];
+        for (int i = 0; i < arrays.length; i++) {
+            if (min > arrays[i]) {
+                min = arrays[i];
+            }
+        }
+        System.out.println("Минимальное значение"+ min);
+        int max = arrays[0];
+        for (int i = 0; i < arrays.length; i++) {
+            if (max < arrays[i]) {
+                max = arrays[i];
+            }
+        }
+        System.out.println("Максимальное значение"+ max);
+    }
+}

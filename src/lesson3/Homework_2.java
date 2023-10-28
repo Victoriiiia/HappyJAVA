@@ -1,14 +1,5 @@
 package lesson3;
-//3. При применении к массиву строк поля length,
-// можно узнать сколько элементов находится в массиве.
-//Тоесть если у Вас есть массив строк типа: String[] arrayOfString; то при вызове
-// поля lenth
-//int size = arrayOfString.length; можно получить какое количество символов
-//находится в данном массиве. Попробовать вывести на экран какое количество раз
-//символ ‘a’ встречается в строке:
-//
-//используя метод split и информацию по поводу поля length Решить данную задачу с
-// учетов верхнего и нижнего регистра символа ‘a’.
+
 
 public class Homework_2 {
     public static void main(String[] args) {
@@ -47,26 +38,16 @@ public class Homework_2 {
         boolean res;
         String text = "Testing";
         System.out.println(res=text.length()>9);
-        System.out.println("===================");
+        System.out.println("======================");
 
-        //String[] arrayOfString;
-        //String[] arrayOfWords;
-        //int size = arrayOfString.length;
-        //String texter ="Completely random text in English. In it, we just need to determine how many" +
-          //      " times the character 'a' occurs there." +
-            //    " And we can use the split method and the length method.";
-        //String[texter] arrayOfString;
-        //int size = arrayOfString.length;
-        //System.out.println(size);
-        //String buk = string.split('a')+ arrayOfWords['a'];
-        //System.out.println(buk.toLowerCase()+buk.toUpperCase());
+        String string = "Completely random text in English." +
+                " In it, we just need to determine how many times" +
+                " the character 'a' occurs there. And we can use" +
+                " the split method and the length method.";
+        String [] arrayOfString = string.split("a");
+        string = string.toLowerCase();
+        int size = arrayOfString.length;
+        System.out.println("Количество букв 'a'" + arrayOfString.length);
 
-
-
-
-
-
-
-
-         }
+    }
 }
