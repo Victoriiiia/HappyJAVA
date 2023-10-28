@@ -2,14 +2,7 @@ package lesson4;
 
 import java.util.Scanner;
 //Условные операторы. Scanner. Formatter.
-//Задание
-//1)
-//У вас есть строка “Я тестирую замечательно. Что еще нужно?”,
-// которую нужно ввести с клавиатуры в консоль.
-//
-//Необходимо при помощи только метода next() класса Scanner (не используем метод nextLine())
-// присвоить перемнным типа String следующие значения: string1 = Я
-// string2 = тестирую string3 = замечател
+
 public class Homework_3 {
     public static void main(String[] args) {
         Scanner nughno = new Scanner(System.in);
@@ -28,93 +21,53 @@ public class Homework_3 {
         System.out.println(string6);
         System.out.println("=====================================");
 
-        Scanner question = new Scanner(System.in);
-        System.out.println("Что вас интересует?");
-        String result = question.nextLine();
-        if (result.equals("Profession")) {
-            System.out.println("Automation Quality Assurance");
-        } else if (result.equals("Programming language")) {
-            System.out.println("Java");
-        } else if (result.equals("Group")) {
-            System.out.println("QA-6");
+        Scanner triangle = new Scanner(System.in);
+        System.out.println("Please insert number 1:");
+        int a = triangle.nextInt();
+        System.out.println("Please insert number 2:");
+        int b = triangle.nextInt();
+        System.out.println("Please insert number 3:");
+        int c = triangle.nextInt();
+        if (a + b > c && a + c > b && b + c > a) {
+            System.out.println("Triangle build.");
         } else {
-            System.out.println("Information not found... Sorry");
+            System.out.println("Triangle is impossible");
         }
-        System.out.println("======================");
 
-        //2)
-//Пользователь вводит с клавиатуры три целочисленных значения.
-// На экран выводится информация можно ли из этих сторон построить треугольник.
-// (необходимо вспомнить правило построения треугольника по трем сторонам).
-        //Scanner triangle = new Scanner(System.in);
-        //System.out.println("Получится ли построить треугольник? Введите три целых числа a b c ");
-        //int a; int b; int c;
-        //boolean a = a<(b+c);
-        //boolean b = b<(a+c);
-        //boolean c = c<(a+b);
-        //int how = triangle.nextInt();
-        //boolean aa = triangle.nextBoolean();
-        //String line;
-       // String linea = "Данное число подходит для стороны треугольника ";
-       // String lineb = "Данное число не подходит для стороны треугольника ";
-       // line = triangle.nextBoolean( int a <= 0) ? linea :
-       //                  (boolean int b <= 0) ? linea : (boolean int c <= 0) ? linea: lineb;
-       // System.out.println(linea);
-       // System.out.println(lineb);
-
-        //if (right.equals("17 12 6")) {
-         //   System.out.println("Tringle build");
-         //} else if (right.equals("12 12 6")) {
-            //  System.out.println("Triangle not build");
-        //}
-       // }
         System.out.println("=================");
-        //IntelliJ IDEA, Git, Java. Из выбора ОС взять: Linux, macOS,
-        //// Windows.
-        //Используя оператор switch написать программу, которая выводит на
-// консоль ссылку для скачивания программы. Из выбора программ
-// взять: IntelliJ IDEA, Git, Java. Из выбора ОС взять: Linux, macOS,
-// Windows. Программа должна спросить пользователя какая программа
-// ему интересна, также спросить какую ОС он использует, а после вывести
-// в консоль необходимую ссылку. Если программа с таким названием
-// не существует выводит сообщение в консоль, о том что такой программы
-// не существует. Если указанной пользователем ОС нет, то выводится
-// сообщение в консоль, о том что такой ОС не существует.
+
         Scanner proga = new Scanner(System.in);
-        System.out.println("Какую программу хотите скачать?");
-        String prog = proga.nextLine();
-        switch (prog) {
-            case ("IDEA"):
+        System.out.println("What program are you interested in " +
+                "(IntelliJ IDEA, Git, Java)?");
+        String program = proga.nextLine();
+        switch (program.toLowerCase()) {
+            case ("intellij idea"):
                 System.out.println("https://www.jetbrains.com/idea/download/?section=windows");
                 break;
-            case ("Git"):
-                System.out.println("https://gitlab.com/");
+            case ("git"):
+                System.out.println("https://git-scm.com/downloads");
                 break;
-            case ("Java"):
-                System.out.println("https://www.oracle.com/java/technologies/downloads/");
+            case ("java"):
+                System.out.println("https://www.oracle.com/cis/java/technologies/downloads/");
                 break;
             default:
-                System.out.println("Такой программы не существует.");
-        Scanner sys = new Scanner(System.in);
-        System.out.println("Какая у Вас операционная система?");
-        String system = sys.nextLine();
-        switch (system.toLowerCase()) {
-            case ("Linux"):
-                System.out.println("https://www.jetbrains.com/idea/download/?section=windows \n" +
-                        "выберите соответсвующую ссылку на сайте");
-                break;
-            case ("macOS"):
-                System.out.println("https://gitlab.com/ +\n выберите соответсвующую ссылку на сайте\");");
-                break;
-            case ("Windows"):
-                System.out.println("https://www.oracle.com/java/technologies/downloads/ + \n выберите соответсвующую ссылку на сайте");
-                break;
-                default:
-                System.out.println("Такой операционной системы не существует.");}
+                System.out.println("There is no such program.");
         }
-//3)
-//При помощи тернарного оператора необходимо получить разность двух чисел введенных
-// с клавиатуры, и всегда отнимать от большего меньшее. Вывести эту разность в консоль.
+        System.out.println("What OS are you using (Linux, macOS, Windows)?");
+        String os = proga.nextLine();
+        switch (os.toLowerCase()){
+            case ("linux"):
+                System.out.println("https://www.linux.org/");
+                break;
+            case ("macos"):
+                System.out.println("https://www.teamviewer.com/ru-cis/download/macos/");
+                break;
+            case ("windows"):
+                System.out.println("https://www.microsoft.com/uk-ua/software-download/windows11");
+                break;
+            default:
+                System.out.println("There is no such OS.");
+           }
         System.out.println("=============================");
         Scanner one =new Scanner(System.in);
         System.out.println("Введите число");
@@ -126,15 +79,6 @@ public class Homework_3 {
         System.out.println(final1);
         System.out.println("===============================");
 
-//4)
-//(Использовать операторы if-else-if) Пользоватьель вводит с клавиатуры
-// числа: Если число равно 1, то выводин на консоль “Понедельник”;
-// Если число равно 2, то выводин на консоль “Вторник”; Если число равно 3,
-// то выводин на консоль “Среда”; Если число равно 4, то выводин на
-// консоль “Четверг”; Если число равно 5, то выводин на консоль “Пятница”;
-// Если число равно 6, то выводин на консоль “Суббота”; Если число равно 7,
-// то выводин на консоль “Суббота”; В противном случае выводим
-// текст: “Лучше бы сегодня была пятница”.
         Scanner ned = new Scanner(System.in);
         System.out.println("Введите число от 1 до 7");
         int den = ned.nextInt();
@@ -159,11 +103,6 @@ public class Homework_3 {
         }
         System.out.println("================================");
 
-//5)
-//Написать программу, используя тернарный оператор, где пользователь
-// вводит с клавиатуры два числа и символ – или + или % или / или *.
-// На экран выводится резултат действия над двумя введенными числами.
-// Если пользователь ввел что-то кроме данных символов, то необходимо вывести 0.
         Scanner sca = new Scanner(System.in);
         System.out.println("Number one insert");
         double num1 = sca.nextDouble();
@@ -175,5 +114,13 @@ public class Homework_3 {
                 sum.equals("%")?num1%num2:sum.equals("/")?num1/num2:
                         sum.equals("*")?num1*num2:0;
         System.out.println(resu);
+        System.out.println("=========================");
+
+
+
+
+
+
+
     }
 }

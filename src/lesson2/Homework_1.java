@@ -2,14 +2,14 @@ package lesson2;
 
 public class Homework_1 {
     public static void main(String[] args) {
-        int a;
-        int b;
-        a = 7;
-        b = 9;
+        int a=7;
+        int b=9;
+        a = a+b;
+        b = a-b;
         a=9;
         b=7;
-        System.out.println(a);
-        System.out.println(b );
+        System.out.println("Вывести значение а"+a);
+        System.out.println("Вывести значение b"+b);
 
     }
 }
