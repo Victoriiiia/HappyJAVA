@@ -40,12 +40,12 @@ public class Homework_2 {
         System.out.println(res=text.length()>9);
         System.out.println("======================");
 
-        String string = "Completely random text in English." +
+        String strings = "Completely random text in English." +
                 " In it, we just need to determine how many times" +
                 " the character 'a' occurs there. And we can use" +
                 " the split method and the length method.";
-        String [] arrayOfString = string.split("a");
-        string = string.toLowerCase();
+        String [] arrayOfString = strings.split("a");
+        strings = strings.toLowerCase();
         int size = arrayOfString.length;
         System.out.println("Количество букв 'a'" + arrayOfString.length);
 
