@@ -1,6 +1,7 @@
 package lesson8;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Homework_7 {
@@ -15,46 +16,48 @@ public class Homework_7 {
         }
         System.out.println("Четные числа в масииве " + chetArrayList);
         System.out.println("Нечетные числа в масииве " + nechetArrayList);
+        System.out.println("==============================");
+
+        public static void main(String[] args) {
+            Homework_7 overLo = new Homework_7();
+            Homework_7.overLo();
+            Homework_7.overLo("String");
+            Homework_7.overLo(new String[]{"First", "Two", "Freee"});
+            Homework_7.overLo(new int[]{49, 563, 1585});
+            Homework_7.overLo(12, "text ");
+        }}
+
+        public void overLo() {
+            Overload overLo = new Overload();
+            System.out.println("i am free:)");
+        }
+        public void overLo (String string) {
+            System.out.println(" I am busy;) with  " + string);
+        }
+        public void overLo (String[] strings) {
+            System.out.println("I am busy;) with " + Arrays.toString(strings)+" ");
+        }
+        public void overLo (int [] numb) {
+            int res=0;
+            for (int i = 0; i < numb.length; i++)
+                res =  res + numb[i];
+            System.out.println( "Summ of numbers : " + res);
+        }
+        public void overLo (int x, String text) {
+            System.out.println("Your mail "+ text);
+            System.out.println("Your number " + x);
+        }}
 
 
-    }
-
-    public static void main(String[] args) {
-        int[] array = {12,16,49589632,2654,14584,214,257,659};
-        new Homework_7().arrayOut(array);
-    }
-    public void over() {
-        Overload overLo = new Overload();
-        System.out.println("I am free:)");
-        public void overLo(String text);
-        System.out.println("I am busy:) with "+ text);
-        public void overLo(String[] maS);
-        System.out.println("I am busy:) with "+ maS+" ");
-        public void overLo(int[] suM);
-        System.out.println("I have summ"+ suM);
-        public void overLo(String text2, int numB);
-        System.out.println("Your mail "+ text2);
-        System.out.println("Your number "+numB);
-    }
 
 
-
-
-
-
-
-    }
-
-
-
-
-    //3)
-    //Создать класс Конспект. Класс должен содержать следующие поля:
-    //
-    //ФИО студента;
-    //Название предмета;
-    //Количество страниц;
-    //Год выпуска;
-    //Цвет обложки.
-    //Название заведения, где учится студент;
+//3)
+//Создать класс Конспект. Класс должен содержать следующие поля:
+//
+//ФИО студента;
+//Название предмета;
+//Количество страниц;
+//Год выпуска;
+//Цвет обложки.
+//Название заведения, где учится студент;
 

@@ -37,8 +37,8 @@ public class Homework_6 {
 
             //System.out.println("Максимальное число первого массива "+max2);
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+  //public static void main(String[] args) {
+    /*Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int targetRow = random.nextInt(5) + 1;
         int targetCol = random.nextInt(5) + 1;
@@ -60,9 +60,10 @@ public class Homework_6 {
             int shutCol = 0;
             while (true) {
                 System.out.println("Input Shut Row  1..5 : ");
-                if (scanner.hasNextInt()) {
+                if (scanner.NextInt()) {
                     shutRow = scanner.nextInt();
-                    if (shutRow < 1 shutRow > 5)
+                    boolean b = shutRow > 5;
+                    if (shutRow < 1 || shutRow > 5)
                     System.out.println("Try again. Not in range 1..5");
                 else break;
                 } else {
@@ -74,7 +75,7 @@ public class Homework_6 {
                 System.out.println("Input Shut Column  1..5 : ");
                 if (scanner.hasNextInt()) {
                     shutCol = scanner.nextInt();
-                    if (shutCol < 1 shutCol > 5)
+                    if (shutCol < 1 || shutCol > 5)
                     System.out.println("Try again. Not in range 1..5");
         else break;
                 } else {
@@ -92,4 +93,4 @@ public class Homework_6 {
         for (int i = 0; i < array.length; i++)
             System.out.println(Arrays.toString(array[i]));
         System.out.println();
-        System.out.println("Game Over, Bye...");}}
+        System.out.println("Game Over, Bye...");}}*/
