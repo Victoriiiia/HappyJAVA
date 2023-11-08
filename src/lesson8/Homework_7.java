@@ -18,7 +18,7 @@ public class Homework_7 {
         System.out.println("Нечетные числа в масииве " + nechetArrayList);
         System.out.println("==============================");
 
-        public static void main(String[] args) {
+
             Homework_7 overLo = new Homework_7();
             Homework_7.overLo();
             Homework_7.overLo("String");
@@ -28,7 +28,7 @@ public class Homework_7 {
         }}
 
         public void overLo() {
-            Overload overLo = new Overload();
+            Homework_7 overLo = new Homework_7();
             System.out.println("i am free:)");
         }
         public void overLo (String string) {
@@ -48,16 +48,12 @@ public class Homework_7 {
             System.out.println("Your number " + x);
         }}
 
-
-
-
-//3)
-//Создать класс Конспект. Класс должен содержать следующие поля:
-//
-//ФИО студента;
-//Название предмета;
-//Количество страниц;
-//Год выпуска;
-//Цвет обложки.
-//Название заведения, где учится студент;
-
+public class Conspect {
+    public String surname;
+    public String name;
+    public String byFather;
+    public String discipline;
+    public int pages;
+    public int yearOfBook;
+    public String colorBook;
+    public String universityName;
