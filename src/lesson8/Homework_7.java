@@ -28,14 +28,15 @@ public class Homework_7 {
         }}
 
         public void overLo() {
-            Homework_7 overLo = new Homework_7();
             System.out.println("i am free:)");
         }
-        public void overLo (String string) {
-            System.out.println(" I am busy;) with  " + string);
+        public void overLo (String string){
+            System.out.println(" I am busy;) with  "+ string);
         }
-        public void overLo (String[] strings) {
-            System.out.println("I am busy;) with " + Arrays.toString(strings)+" ");
+        public void overLo (String[] strings){
+            for (int i =0;i<strings.length;i++)
+            System.out.print(" I am busy;) with  "+Arrays.toString(strings));
+            System.out.println();
         }
         public void overLo (int [] numb) {
             int res=0;
