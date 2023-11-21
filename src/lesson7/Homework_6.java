@@ -91,13 +91,4 @@ public class Homework_6 {
             System.out.println("Insert your name:");
             String name = scanner.nextLine();
             return name;
-        }
-
-
-        public static void main(String[] args) {
-            Aim aimObject = new Aim();
-            String[][] aimString = new Aim().setAim();
-            aimObject.printAim(aimString);
-            aimObject.playGame(aimString, aimObject.getName());
-        }
-    }
+        }}}
